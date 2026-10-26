@@ -48,7 +48,7 @@ jobs:
   # leaves the default push set at exactly the 60m it has always had.
   plan:
     name: Resolve Job Budgets
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
     timeout-minutes: 5
     outputs:
       single_timeout: ${{ steps.budgets.outputs.single_timeout }}
@@ -1055,7 +1055,7 @@ jobs:
     name: Report E2E Status
     if: always()
     needs: [e2e_single, e2e_multi]
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
     timeout-minutes: 5
     steps:
       - name: Report Status to PR

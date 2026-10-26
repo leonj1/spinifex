@@ -38,7 +38,7 @@ env:
 
 jobs:
   select:
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
     outputs:
       cells: ${{ steps.pick.outputs.cells }}
       any: ${{ steps.pick.outputs.any }}
@@ -1598,7 +1598,7 @@ jobs:
         stress,
       ]
     if: always()
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
     steps:
       - uses: actions/checkout@v7
         with:

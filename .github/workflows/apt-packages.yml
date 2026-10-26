@@ -28,7 +28,7 @@ permissions:
 jobs:
   apt_packages:
     name: Resolve apt list (${{ matrix.image }})
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
 
     strategy:
       fail-fast: false

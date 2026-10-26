@@ -919,7 +919,7 @@ jobs:
     name: E2E suite blocks · summary
     if: always()
     needs: [single_suite, multi_suite]
-    runs-on: ubuntu-26.04
+    runs-on: [self-hosted, linux, x64]
     timeout-minutes: 5
     steps:
       - name: Summarize
